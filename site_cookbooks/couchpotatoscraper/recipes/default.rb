@@ -7,5 +7,7 @@
 # All rights reserved - Do Not Redistribute
 #
 
-include_recipe "couchpotatoscraper::grunt"
-include_recipe "couchpotatoscraper::nodemon"
+execute 'npm install' do
+	cwd '/opt/app'
+	command 'npm install'
+end
